@@ -1,0 +1,472 @@
+<!doctype html>
+<html>
+<head>
+	<title>Central Committee of the Communist Party of China</title>
+	<link rel="icon" type="image/x-icon" href="ico.ico" media="screen" />
+	<script src="jquery-2.1.1.js"></script>
+
+	<script>
+		var flag = 0;
+
+		function movep1(){
+			var x=$("#p1").position()+260;
+			var string = x.left + "px";
+			$(document).ready(function(){
+			$("#p1").unbind('mouseenter mouseleave');
+		   	$("#imgp1").animate({left:"+=260px"},"slow","swing");
+		   	
+		   	$("#imgp1").bind('click');
+		   });
+		}
+
+		function movep2(){
+			$(document).ready(function(){
+			$("#p2").unbind('mouseenter mouseleave');
+		   	$("#imgp2").animate({top:"+=170px"},"slow","swing");
+		   	
+		   });
+		}
+
+		function movep3(){
+			$(document).ready(function(){
+				$("#p3").unbind('mouseenter mouseleave');
+		   	$("#imgp3").animate({left:"-=670px"},"slow","swing");
+		   	
+		   });
+		}
+
+		function movep4(){
+			$(document).ready(function(){
+				$("#p4").unbind('mouseenter mouseleave');
+		   	$("#imgp4").animate({left:"+=520px",top:"-=340px"},"slow","swing");
+		   	
+		   });
+		}
+
+		function movep5(){
+			$(document).ready(function(){
+				$("#p5").unbind('mouseenter mouseleave');
+		   	$("#imgp5").animate({left:"-=130px"},"slow","swing");
+		   	
+		   });
+		}
+
+		function movep6(){
+			$(document).ready(function(){
+		   	$("#imgp6").animate({top:"+=350px"},"slow","swing");
+		   	$("#p6").unbind('mouseenter mouseleave');
+		   });
+		}
+
+		function movep7(){
+			$(document).ready(function(){
+		   	$("#imgp7").animate({left:"-=135px"},"slow","swing");
+		   	$("#p7").unbind('mouseenter mouseleave');
+		   });
+		}
+
+		function movep8(){
+			$(document).ready(function(){
+		   	$("#imgp8").animate({top:"+=170px"},"slow","swing");
+		   	$("#p8").unbind('mouseenter mouseleave');
+		   });
+		}
+
+		function movep9(){
+			$(document).ready(function(){
+		   	$("#imgp9").animate({left:"-=270px",top:"-=170"},"slow","swing");
+		   	$("#p9").unbind('mouseenter mouseleave');
+		   });
+		}
+
+		function movep10(){
+			$(document).ready(function(){
+		   	$("#imgp10").animate({left:"+=410px",top:"-=180"},"slow","swing");
+		   	$("#p10").unbind('mouseenter mouseleave');
+		   });
+		}
+
+		function rearrangefunc(e){
+		
+		$(document).ready(function(){
+		   $("img").unbind('click');
+		   $("#container").animate({top:"50px", height:"200"},"slow","swing",showp(event));
+		   $("#logo").animate({top:"50px", height:"100", width:"110"},"slow","swing",showp(event));
+		   setTimeout(function(){$("#field").fadeIn(3000);}, 1000);   
+		   setTimeout(function(){$("#f1").fadeIn(3000);}, 1000); 
+		   //setTimeout(function(){$("#f2").fadeIn(3000);}, 1000);  
+		   	$("#p1").hover(function(){
+		   		movep1();
+		   	},
+
+	    function(){
+
+
+	  });
+		  	$("#p2").hover(function(){
+		   	movep2();
+		},
+	    function(){
+
+
+	  });
+
+		  	$("#p3").hover(function(){
+		   	movep3();
+		},
+	    function(){
+
+
+	  });
+
+		  	$("#p4").hover(function(){
+		   	movep4();
+		},
+	    function(){
+
+
+	  });
+
+		  	$("#p5").hover(function(){
+		   	movep5();
+		},
+	    function(){
+
+
+	  });
+
+		   	$("#p6").hover(function(){
+		   		movep6();
+		   	},
+
+	    function(){
+
+
+	  });
+		  	$("#p7").hover(function(){
+		   	movep7();
+		},
+	    function(){
+
+
+	  });
+
+		  	$("#p8").hover(function(){
+		   	movep8();
+		},
+	    function(){
+
+
+	  });
+
+		  	$("#p9").hover(function(){
+		   	movep9();
+		},
+	    function(){
+
+
+	  });
+
+		  	$("#p10").hover(function(){
+		   	movep10();
+		},
+	    function(){
+
+
+	  });
+
+		    $("#p1").click(function(){
+		   		$("#w1").fadeToggle('slow');
+	  });
+		    $("#p2").click(function(){
+		   		$("#w2").fadeToggle('slow');
+	  });
+		    $("#p3").click(function(){
+		   		$("#w3").fadeToggle('slow');
+	  });	
+		    $("#p4").click(function(){
+		   		$("#w4").fadeToggle('slow');
+	  });
+		    $("#p5").click(function(){
+		   		$("#w5").fadeToggle('slow');
+		   		setTimeout(function(){$("#f1").hide();}, 8000);
+		   		setTimeout(function(){$("#f2").fadeIn(3000);}, 8000);
+	  });
+
+		    $("#p6").click(function(){
+		   		$("#w6").fadeToggle('slow');
+	  });
+		    $("#p7").click(function(){
+		   		$("#w7").fadeToggle('slow');
+	  });
+		    $("#p8").click(function(){
+		   		$("#w8").fadeToggle('slow');
+	  });	
+		    $("#p9").click(function(){
+		   		$("#w9").fadeToggle('slow');
+	  });
+		    $("#p10").click(function(){
+		   		$("#w10").fadeToggle('slow');
+
+		   	
+	  });
+
+		});
+		}
+
+		function showp(e)
+		{
+		$(document).ready(function(){
+			$("#inner").click(function(event) {
+	        $(this).unbind('mouseenter mouseleave');
+	        rearrangefunc();
+			});
+		});		
+		}
+
+
+		var counter = 0;
+		var dep=0;
+
+		$(document).ready(function(){
+
+
+		  $("#f1").hide();
+		  $("#f2").hide();
+
+		  $("#w1").hide();
+		  $("#w2").hide();
+		  $("#w3").hide();
+		  $("#w4").hide();
+		  $("#w5").hide();
+		  $("#w6").hide();
+		  $("#w7").hide();
+		  $("#w8").hide();
+		  $("#w9").hide();
+		  $("#w10").hide();
+
+
+
+
+
+		  dep=$("#container").scrollTop()+($(window).height())/2-180;
+		  $("#container").css("top",dep+"px");
+
+		  $("#inner").hover(function(){
+		  	$("#container").stop();
+		  	$("#panel").stop();
+		    $("#container").animate({top:"160px"},"slow","swing",showp(event));
+
+		    $("#panel").slideDown(2000);
+		},
+	    function(){
+	    	$("#container").stop();
+	    	$("#panel").stop();
+	    	dep=$("#container").scrollTop()+($(window).height())/2-80;
+	    	$("#container").animate({top:"200px"},"slow","swing",showp(event));
+	    	$("#panel").slideUp(dep*2);
+
+	  });
+	});
+
+	</script>
+	<style>
+	body{
+		background-color: #fff;
+		font-family:"Helvetica";
+
+		margin:0;
+		padding:0;
+		text-align: center;
+
+	}
+	#container{
+		width:600px;
+		position:relative;
+		line-height:0.1em;
+	}
+	.initial {
+		margin-left:auto;
+		margin-right:auto;
+		width:600px;
+		position:relative;
+
+	}
+
+	#container p {
+
+		color:#ff5f5f;
+	}
+
+	#logo {
+		width:190px;
+		height:200px;
+		margin:auto;
+	}
+	.people {
+		margin-right: 10px;
+		margin-bottom: 10px;
+		width:50px;
+		height:90px;
+		position:relative;
+		float:left;
+	}
+	#panel
+	{
+		padding:10px;
+		display:none;
+	}
+	#inner{
+	    
+	    display: table;
+	    
+	    margin: 0 auto;
+	}
+
+	.field{
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:100px;
+   	position:relative;
+  
+   	width: 1000px;
+   }
+   .people{
+   	position: relative;
+   	float: left;
+   	width:100px;
+   	height: 170px;
+   	margin-left: 30px;
+
+   	z-index:20;
+   }
+
+   .space{
+   	position: relative;
+   	float: left;
+   	width: 100px;
+   	height: 170px;
+   	margin-left:30px;
+   }
+
+   .word{
+   	position:absolute;
+   	width:150px;
+   	border: solid 1px #ff5f5f;
+   	background-color:#ffebeb;
+   	color:#ff5f5f;
+   	margin:5px;
+   	margin-left:30px;
+   	z-index: 100;
+   	padding:7px;
+   }
+   .word i{
+   	font-size: 14px;
+   }
+
+    #w1{
+
+   	margin-left:400px;
+   	margin-top:-45px;
+	z-index: 100;
+   }
+
+   #w2{
+   	margin-left:240px;
+   	margin-top:150px;
+   }
+   #w3{
+   	margin-top: 175px;
+   	margin-left:-25px;
+   }
+   #w4{
+   	margin-left:800px;
+   	margin-top:30px;
+   }
+   #w5{
+   	margin-left: 240px;
+   	margin-top:340px;
+   }
+   #w6{
+   	margin-left: 290px;
+   	margin-top: 330px;
+   }
+   #w7{
+   	margin-left: -20px;
+   	margin-top:100px;
+   }
+   #w8{
+   	margin-left:680px;
+   	margin-top:280px;
+   }
+   #w9{
+   	margin-left:395px;
+   	margin-top:-20px;
+   }
+   #w10{
+   	margin-left: 560px;
+   	margin-top:190px;
+   }
+
+	</style>
+
+</head>
+<body>
+	<div id="container" class = "initial">
+		<div id="inner"><img src="logo.png" id="logo"></div>
+		<div id ="panel">
+			<p style="font-size:24px">Central Committee of the Communist Party of China</p >
+			<p style="font-size:20px">Spring 2015</p >
+		</div>
+	</div>
+<div class="field" id="f1">
+		<div id="p1"><img id="imgp1" class="people" src="images/ppl1.png"></div>
+		<div class="word" id="w1">Committe member Feng Zhongda. </br><i>"For those residents who ask for whopping price for demolition, the government should do whatever acts that they need to do. These ordinary people, should not be so greedy. No one would say "no" to the government for demolition during the Mao time."</i></div>
+		<div class="word" id="w2">Committe member Mu Lingru, </br><i>"Real estate industry obeys the market rules. As long as there is agreement between the buyer and seller, no matter the price of square meter is one million or ten million, government should not intervene."</i></div>
+		<div class="word" id="w3">Committe member Chen Hongtian, </br><i>"Since the house price cannot be cut down by any means, there should not be bubbles in the real estate market."</i></div>
+		<div class="word" id="w4">Committe member Wang Yi,  </br><i>"Citizens should pay tax for the fresh air. Breath fresh without paying anything is impossible."</i></div>
+		<div class="word" id="w5">Committe member Shen Jilan,  </br><i>"The internet access should be permitted by government. This is a communism country led by the Commuist Party. Open Internet access should not be allowed.</i></div>
+		<div class="space"></div>
+		<div class="space"></div>
+
+		<div id="p2"><img id="imgp2" class="people" src="images/ppl2.png"></div>
+		<div class="space"></div>
+		<div class="space"></div>
+		<div class="space"></div>
+		<div class="space"></div>
+		<div class="space"></div>
+		<div id="p3"><img id="imgp3" class="people" src="images/ppl3.png"></div>
+		<div class="space"></div>
+		<div id="p4"><img id="imgp4" class="people" src="images/ppl4.png"></div>
+		<div class="space"></div><div class="space"></div>
+		<div id="p5"><img id="imgp5" class="people" src="images/ppl5.png"></div>
+	
+		<div class="space"></div>
+		<div class="space"></div><!--<button id="next">-->
+		</div>
+
+<div class="field" id="f2">
+		<div class="space"></div>
+		<div id="p6"><img id="imgp6" class="people" src="images/ppl6.png"></div>
+		<div class="space"></div>
+		<div class="space"></div>
+		<div class="space"></div>
+		<div class="space"></div>
+		<div class="space"></div>
+		<div id="p7"><img id="imgp7" class="people" src="images/ppl7.png"></div>
+		<div class="space"></div>
+		<div id="p8"><img id="imgp8" class="people" src="images/ppl8.png"></div>
+		<div class="space"></div>
+		<div id="p9"><img id="imgp9" class="people" src="images/ppl1.png"></div>
+		<div id="p10"><img id="imgp10" class="people" src="images/ppl2.png"></div>
+		<div class="word" id="w6">Committe member Ye Pengzhi, </br><i> Is there any legal ground to make public government official's assets? Officials are human being as well, who also have privacy. They work for the civilsc, but not as slaves.</i></div>
+		<div class="word" id="w7">Committe member Li Jiange,  </br><i> "We should not raise the wage of the workers. The low rate wage of workers is reducing the product budget and making us competitive. In this case, the entrepreneurs are able to make more money. Then China could attract more investment from abroad. Once the wage goes up, these investment will flow into neibor countries.</i></div>
+		<div class="word" id="w8">Committe member Chen Yanbin, </br><i>"It is said that the Economic inequality in China is weigh to much. In fact, the wealth gap is not big enough. This certain gap will bring the economic and society into a great development. Those people who are argueing about this are actually jealous about the wealthy."</i></div>
+		<div class="word" id="w9">Committe member Wang Ping, </br><i>"Wang Ping, We should not encourage the children from remote area to go to college. Once they do, they would not return to their hometown. In this case, it would be a tragedy."</i></div>
+		<div class="word" id="w10">committe member Ren Zhenglong, </br><i>"Raising the personal taxable threshold deprives the honor of being a taxpayer for the low-income."</i></div>
+	</div>
+
+
+
+</body>
+</html>
